@@ -2,14 +2,244 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Pizza DaiNam - Pizza cho sinh viên & giảng viên Đại học Đại Nam</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Noi se go code chinh -->
-     Day la trag web dau tien cua toi
-     THử gõ tiếng việt xem nt
-     <span style="color: red;">Đây là đoạn văn bản thử nghiệm để kiểm tra việc gõ tiếng Việt có dấu trên trang web của tôi.</span>
-     <p>Đây là đoạn văn bản thử nghiệm để kiểm tra việc gõ tiếng Việt có dấu trên trang web của tôi.</p>
+
+    <!-- ================= HEADER & NAV (STICKY) ================= -->
+    <header class="header">
+        <div class="container header__container">
+            <div class="logo">
+                <a href="#">🍕 Pizza<span>DaiNam</span></a>
+            </div>
+            <nav class="navbar">
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#combos" class="nav-link">Combos</a></li>
+                    <li><a href="#types" class="nav-link">Types</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span><span></span><span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- ================= HERO BANNER ================= -->
+        <section id="home" class="hero">
+            <div class="hero__overlay"></div>
+            <div class="container hero__content">
+                <h1>Pizza DaiNam</h1>
+                <p class="hero__slogan">Ngon - Rẻ - Gần giảng đường</p>
+                <p class="hero__desc">Dành riêng cho sinh viên, cán bộ, giảng viên Đại học Đại Nam. Giá ưu đãi mỗi ngày!</p>
+                <a href="#combos" class="btn btn--primary">Đặt ngay</a>
+            </div>
+        </section>
+
+        <!-- ================= WHY CHOOSE US ================= -->
+        <section class="why-choose-us">
+            <div class="container">
+                <h2 class="section-title">Vì sao chọn Pizza DaiNam?</h2>
+                <div class="reasons-grid">
+                    <div class="reason-card">
+                        <div class="reason-icon">🚚</div>
+                        <h3>Giao hàng siêu tốc</h3>
+                        <p>Giao tận ký túc xá, giảng đường chỉ 15 phút.</p>
+                    </div>
+                    <div class="reason-card">
+                        <div class="reason-icon">🧀</div>
+                        <h3>Nguyên liệu tươi mỗi ngày</h3>
+                        <p>Phô mai nhập khẩu, rau củ đạt chuẩn.</p>
+                    </div>
+                    <div class="reason-card">
+                        <div class="reason-icon">⏰</div>
+                        <h3>Phục vụ 24/24</h3>
+                        <p>Mở cửa cả ngày lẫn đêm, phục vụ mọi khung giờ.</p>
+                    </div>
+                    <div class="reason-card">
+                        <div class="reason-icon">🎓</div>
+                        <h3>Ưu đãi sinh viên</h3>
+                        <p>Giảm 10% cho sinh viên, giảng viên Đại Nam.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= MENU COMBO (S, M, L) ================= -->
+        <section id="combos" class="combos">
+            <div class="container">
+                <h2 class="section-title">Combo tiết kiệm</h2>
+                <div class="combo-grid">
+                    <div class="combo-card">
+                        <div class="combo-badge">Tiết kiệm 20%</div>
+                        <h3>Combo S</h3>
+                        <div class="combo-price">99k</div>
+                        <ul class="combo-features">
+                            <li>Pizza 20cm (1 vị)</li>
+                            <li>2 cánh gà chiên</li>
+                            <li>1 Pepsi lon</li>
+                            <li>Salad trộn nhỏ</li>
+                        </ul>
+                        <button class="btn btn--outline">Chọn ngay</button>
+                    </div>
+                    <div class="combo-card combo-card--popular">
+                        <div class="combo-badge">Bán chạy nhất</div>
+                        <h3>Combo M</h3>
+                        <div class="combo-price">149k</div>
+                        <ul class="combo-features">
+                            <li>Pizza 27cm (2 vị)</li>
+                            <li>4 cánh gà + khoai tây</li>
+                            <li>2 Pepsi lon</li>
+                            <li>Salad trộn lớn</li>
+                        </ul>
+                        <button class="btn btn--primary">Chọn ngay</button>
+                    </div>
+                    <div class="combo-card">
+                        <div class="combo-badge">Đại gia đình</div>
+                        <h3>Combo L</h3>
+                        <div class="combo-price">249k</div>
+                        <ul class="combo-features">
+                            <li>Pizza 30cm (3 vị)</li>
+                            <li>6 cánh gà + khoai tây</li>
+                            <li>3 Pepsi lon</li>
+                            <li>Salad trộn + bánh que</li>
+                        </ul>
+                        <button class="btn btn--outline">Chọn ngay</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PIZZA TYPES (4 MÓN) ================= -->
+        <section id="types" class="pizza-types">
+            <div class="container">
+                <h2 class="section-title">Pizza đặc trưng</h2>
+                <div class="pizza-grid">
+                    <article class="pizza-card">
+                        <div class="pizza-img">
+                            <img src="img/pizza-hawaii.jpg" alt="Pizza Hawaii">
+                        </div>
+                        <div class="pizza-info">
+                            <h3>Pizza Hawaii</h3>
+                            <p>Dứa ngọt, giăm bông hun khói, phô mai Mozzarella béo ngậy.</p>
+                            <span class="price">79k <small>(size S)</small></span>
+                            <button class="btn btn--small">Đặt mua</button>
+                        </div>
+                    </article>
+                    <article class="pizza-card">
+                        <div class="pizza-img">
+                            <img src="img/pizza-seafood.jpg" alt="Pizza Hải Sản">
+                        </div>
+                        <div class="pizza-info">
+                            <h3>Pizza Hải Sản</h3>
+                            <p>Tôm, mực, thanh cua, sốt kem tỏi, phô mai Pamesan.</p>
+                            <span class="price">99k <small>(size S)</small></span>
+                            <button class="btn btn--small">Đặt mua</button>
+                        </div>
+                    </article>
+                    <article class="pizza-card">
+                        <div class="pizza-img">
+                            <img src="img/pizza-bacon.jpg" alt="Pizza Thịt xông khói">
+                        </div>
+                        <div class="pizza-info">
+                            <h3>Pizza Thịt xông khói</h3>
+                            <p>Bacon giòn, thịt bò bằm, sốt BBQ đậm đà.</p>
+                            <span class="price">89k <small>(size S)</small></span>
+                            <button class="btn btn--small">Đặt mua</button>
+                        </div>
+                    </article>
+                    <article class="pizza-card">
+                        <div class="pizza-img">
+                            <img src="img/pizza-4seasons.jpg" alt="Pizza 4 mùa">
+                        </div>
+                        <div class="pizza-info">
+                            <h3>Pizza 4 mùa</h3>
+                            <p>Nấm, ô liu, atiso, giăm bông, sốt cà chua đặc biệt.</p>
+                            <span class="price">109k <small>(size S)</small></span>
+                            <button class="btn btn--small">Đặt mua</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= CONTACT FORM ================= -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Liên hệ đặt hàng</h2>
+                <div class="contact-wrapper">
+                    <form class="contact-form" action="#" method="post">
+                        <div class="form-group">
+                            <label for="fullname">Họ và tên *</label>
+                            <input type="text" id="fullname" name="fullname" required placeholder="Nguyễn Văn A">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required placeholder="sinhvien@dainam.edu.vn" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Số điện thoại *</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="0912345678" pattern="[0-9]{9,10}">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Lời nhắn (ghi rõ món, ký túc xá nào...)</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Ví dụ: 1 combo M, giao đến KTX A3..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn--primary btn--block">Gửi đơn hàng</button>
+                    </form>
+                    <div class="contact-info">
+                        <h3>🍕 Pizza DaiNam</h3>
+                        <p>📍 Số 1, Phố Xốm, Phường Phú Lương, Hà Nội</p>
+                        <p>📞 Hotline: <strong>1900 9999</strong></p>
+                        <p>⏰ Phục vụ: 24/7 (cả ngày lẫn đêm)</p>
+                        <p>🎓 Ưu đãi: Giảm 10% cho sinh viên, giảng viên Đại Nam</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <!-- ================= FOOTER ================= -->
+<footer class="footer">
+    <div class="container footer__container">
+        <div class="footer__copyright">
+            <p>&copy; 2025 Pizza DaiNam - Dành riêng cho Đại học Đại Nam.</p>
+        </div>
+        <div class="footer__social">
+            <a href="#" aria-label="Facebook">
+                <img src="img/icon-facebook.svg" alt="Facebook">
+            </a>
+            <a href="#" aria-label="Instagram">
+                <img src="img/icon-instagram.svg" alt="Instagram">
+            </a>
+            <a href="#" aria-label="TikTok">
+                <img src="img/icon-tiktok.svg" alt="TikTok">
+            </a>
+            <a href="#" aria-label="Zalo">
+                <img src="img/icon-zalo.svg" alt="Zalo">
+            </a>
+        </div>
+    </div>
+</footer>
+
+    <!-- Mobile menu toggle -->
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+        document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        }));
+    </script>
 </body>
 </html>

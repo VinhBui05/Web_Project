@@ -1,0 +1,548 @@
+/* ---------- RESET & BASE ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.5;
+    color: #1e1e2a;
+    background: #fffcf7;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ---------- TYPOGRAPHY ---------- */
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+    color: #c0392b;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #f39c12;
+    margin: 0.5rem auto 0;
+    border-radius: 4px;
+}
+
+/* ---------- BUTTONS ---------- */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.8rem;
+    font-weight: 600;
+    border-radius: 40px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+    text-align: center;
+}
+
+.btn--primary {
+    background: #c0392b;
+    color: white;
+    box-shadow: 0 4px 8px rgba(192, 57, 43, 0.2);
+}
+
+.btn--primary:hover {
+    background: #a82315;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(192, 57, 43, 0.3);
+}
+
+.btn--outline {
+    background: transparent;
+    border: 2px solid #c0392b;
+    color: #c0392b;
+}
+
+.btn--outline:hover {
+    background: #c0392b;
+    color: white;
+    transform: scale(1.02);
+}
+
+.btn--small {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.9rem;
+    background: #f39c12;
+    color: #1e1e2a;
+}
+
+.btn--small:hover {
+    background: #e67e22;
+    transform: translateY(-2px);
+}
+
+.btn--block {
+    width: 100%;
+}
+
+/* ---------- HEADER (STICKY) ---------- */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+    z-index: 1000;
+    padding: 1rem 0;
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo a {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #c0392b;
+}
+
+.logo span {
+    color: #f39c12;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-link {
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.nav-link:hover {
+    color: #c0392b;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #c0392b;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* ---------- HERO ---------- */
+.hero {
+    position: relative;
+    min-height: 90vh;
+    background: url('../img/hero-pizza.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-top: 70px;
+}
+
+.hero__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.55);
+}
+
+.hero__content {
+    position: relative;
+    color: white;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero__slogan {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.hero__desc {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+/* ---------- WHY CHOOSE US (GRID 4 CỘT) ---------- */
+.reasons-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.reason-card {
+    background: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s;
+}
+
+.reason-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.reason-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.reason-card h3 {
+    margin-bottom: 0.5rem;
+}
+
+/* ---------- COMBO SECTION ---------- */
+.combo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.combo-card {
+    background: white;
+    border-radius: 28px;
+    padding: 1.8rem;
+    text-align: center;
+    position: relative;
+    transition: 0.25s ease-in-out;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.combo-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+}
+
+.combo-card--popular {
+    border: 2px solid #f39c12;
+    background: #fff9ef;
+}
+
+.combo-badge {
+    position: absolute;
+    top: -12px;
+    left: 20px;
+    background: #c0392b;
+    color: white;
+    padding: 0.2rem 1rem;
+    border-radius: 30px;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.combo-price {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #c0392b;
+    margin: 1rem 0;
+}
+
+.combo-features {
+    margin: 1rem 0;
+    text-align: left;
+    padding-left: 1rem;
+}
+
+.combo-features li {
+    margin: 0.5rem 0;
+    list-style: disc;
+}
+
+/* ---------- PIZZA TYPES (GRID 4 CỘT) ---------- */
+.pizza-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.pizza-card {
+    background: white;
+    border-radius: 24px;
+    overflow: hidden;
+    transition: all 0.3s;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.05);
+}
+
+.pizza-card:hover {
+    transform: translateY(-6px);
+}
+
+.pizza-img img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.pizza-info {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+}
+
+.pizza-info h3 {
+    font-size: 1.4rem;
+}
+
+.price {
+    font-weight: 800;
+    font-size: 1.3rem;
+    color: #e67e22;
+}
+
+.pizza-info .btn {
+    align-self: center;
+    margin-top: 0.5rem;
+}
+
+/* ---------- CONTACT FORM ---------- */
+.contact {
+    background: #fef5e7;
+    padding: 3rem 0;
+}
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.contact-form .form-group {
+    margin-bottom: 1.2rem;
+}
+
+.contact-form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 14px;
+    font-family: inherit;
+    transition: 0.2s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #c0392b;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.1);
+}
+
+.contact-form input:invalid:focus,
+.contact-form input:required:invalid:not(:placeholder-shown) {
+    border-color: #e74c3c;
+}
+
+.contact-info {
+    background: white;
+    padding: 1.8rem;
+    border-radius: 28px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.05);
+}
+
+.contact-info h3 {
+    margin-bottom: 1rem;
+    color: #c0392b;
+}
+
+.contact-info p {
+    margin: 0.5rem 0;
+}
+
+/* ---------- FOOTER ---------- */
+.footer {
+    background: #1e1e2a;
+    color: #ccc;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer__social {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer__social a {
+    font-size: 1.8rem;
+    transition: all 0.2s;
+}
+
+.footer__social a:hover {
+    color: #f39c12;
+    transform: scale(1.1);
+}
+
+/* ---------- FOOTER SOCIAL ICONS (HÌNH ẢNH) ---------- */
+.footer__social a {
+    display: inline-block;
+    transition: all 0.2s ease;
+}
+
+.footer__social img {
+    width: 28px;
+    height: 28px;
+    display: block;
+    transition: transform 0.2s ease;
+}
+
+.footer__social a:hover img {
+    transform: scale(1.15);
+    filter: brightness(0) saturate(100%) invert(73%) sepia(51%) saturate(540%) hue-rotate(2deg) brightness(103%) contrast(101%);
+    /* Chuyển icon sang màu cam #f39c12 khi hover */
+}
+
+/* ---------- RESPONSIVE (MOBILE-FIRST) ---------- */
+/* Tablet: 768px */
+@media (max-width: 768px) {
+    .reasons-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .pizza-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .hero h1 {
+        font-size: 2.4rem;
+    }
+
+    .hero__slogan {
+        font-size: 1.3rem;
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background: white;
+        width: 70%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        padding: 2rem 0;
+        gap: 1.5rem;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+}
+
+/* Mobile: 576px */
+@media (max-width: 576px) {
+    .reasons-grid,
+    .pizza-grid,
+    .combo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+    }
+
+    .hero {
+        min-height: 70vh;
+        margin-top: 70px;
+    }
+
+    .hero__desc {
+        font-size: 0.95rem;
+    }
+
+    .footer__container {
+        flex-direction: column;
+    }
+}
+
+/* Desktop lớn: giữ nguyên grid 4 cột */
+@media (min-width: 1200px) {
+    .container {
+        padding: 0 2rem;
+    }
+}
